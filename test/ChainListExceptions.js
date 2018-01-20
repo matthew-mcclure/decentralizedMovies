@@ -21,7 +21,8 @@ contract('ChainList', function(accounts) {
         });
       }).then(assert.fail)
       .catch(function(error) {
-        assert(error.message.indexOf('invalid opcode') >= 0, "error message must contain invalid opcode");
+        console.log(error)
+        assert(error.message.indexOf('Exception') >= 0, "error message must contain invalid opcode");
       }).then(function() {
         return chainListInstance.getNumberOfArticles();
       }).then(function(data) {
@@ -44,7 +45,7 @@ contract('ChainList', function(accounts) {
         });
       }).then(assert.fail)
       .catch(function(error) {
-        assert(error.message.indexOf('invalid opcode') >= 0, "error message must contain invalid opcode");
+        assert(error.message.indexOf('Exception') >= 0, "error message must contain invalid opcode");
       }).then(function() {
         return chainListInstance.articles(articleId);
       }).then(function(data) {
@@ -67,7 +68,7 @@ contract('ChainList', function(accounts) {
         });
       }).then(assert.fail)
       .catch(function(error) {
-        assert(error.message.indexOf('invalid opcode') >= 0, "error message must contain invalid opcode");
+        assert(error.message.indexOf('Exception') >= 0, "error message must contain invalid opcode");
       }).then(function() {
         return chainListInstance.articles(articleId);
       }).then(function(data) {
@@ -91,7 +92,7 @@ contract('ChainList', function(accounts) {
         });
       }).then(assert.fail)
       .catch(function(error) {
-        assert(error.message.indexOf('invalid opcode') >= 0, "error message must contain invalid opcode");
+        assert(error.message.indexOf('Exception') >= 0, "error message must contain invalid opcode");
       }).then(function() {
         return chainListInstance.articles(articleId);
       }).then(function(data) {
@@ -120,7 +121,7 @@ contract('ChainList', function(accounts) {
         });
       }).then(assert.fail)
       .catch(function(error) {
-        assert(error.message.indexOf('invalid opcode') >= 0, "error message must contain invalid opcode");
+        assert(error.message.indexOf('Exception') >= 0, "error message must contain invalid opcode");
       }).then(function() {
         return chainListInstance.articles(articleId);
       }).then(function(data) {
