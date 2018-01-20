@@ -13,6 +13,9 @@
   },
   "author": "ChainSkills",
   "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.3.0"
+  },
   "devDependencies": {
     "lite-server": "^2.3.0"
   }
