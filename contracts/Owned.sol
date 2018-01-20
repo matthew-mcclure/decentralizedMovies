@@ -1,5 +1,6 @@
 pragma solidity ^0.4.11;
 
+// this portion of the contract is needed to prevent non-owners from taking action on the blocks
 contract Owned {
   // State variable
   address owner;

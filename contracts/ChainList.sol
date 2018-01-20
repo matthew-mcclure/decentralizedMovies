@@ -2,6 +2,7 @@ pragma solidity ^0.4.11;
 
 import "./Owned.sol";
 
+// this extends the Owned contract - see for other contract properties
 contract ChainList is Owned {
   // Custom types
   struct Article {
@@ -115,6 +116,8 @@ contract ChainList is Owned {
   }
 
   // kill the smart contract
+  // this is used to clean up the chain and prevent 'bots' from sitting indefinitely
+  // will cost gas to kill the contract, but it's subsidized by the network
   function kill() onlyOwner {
     selfdestruct(owner);
   }
