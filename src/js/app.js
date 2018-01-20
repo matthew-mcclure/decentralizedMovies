@@ -10,6 +10,7 @@ App = {
 
   initWeb3: function() {
     // Initialize web3 and set the provider to the testRPC.
+    // testRPC must be running from another console - running this repo will not initialize it for you
     if (typeof web3 !== 'undefined') {
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
