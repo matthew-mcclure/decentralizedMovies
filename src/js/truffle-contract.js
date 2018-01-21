@@ -25,6 +25,8 @@ var contract = (function(module) {
     return this.provider.sendAsync.apply(this.provider, arguments);
   };
 
+  // big numbers must be used in place of integers due to rounding issues
+  // an integer can over / underpay users by miniscule amounts that add up in bulk
   var BigNumber = (new Web3()).toBigNumber(0).constructor;
 
   var Utils = {
